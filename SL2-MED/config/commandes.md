@@ -3,6 +3,8 @@ enable
 
 conf t
 
+hostname SL2-MED
+
 # Configurations des Vlans
 vlan 20
 name MED
