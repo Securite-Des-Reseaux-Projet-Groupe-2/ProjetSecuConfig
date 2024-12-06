@@ -76,6 +76,8 @@ passive-interface fa1/2
 passive-interface fa1/3
 exit
 
+ip route 0.0.0.0 0.0.0.0 10.1.0.5
+
 # Création users
 username admin privilege 15 secret cisco
 username helpdesk privilege 1 secret cisco
