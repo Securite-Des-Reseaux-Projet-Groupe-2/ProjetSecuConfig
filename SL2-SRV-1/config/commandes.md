@@ -4,6 +4,8 @@ enable
 
 conf t
 
+hostname SL2-SRV-1
+
 #configurer les vlans
 
 vlan 30
