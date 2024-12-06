@@ -1,4 +1,4 @@
-```
+
 enable
 
 conf t
@@ -21,4 +21,3 @@ switchport access vlan 10
 end
 
 copy running-config startup-config
-```

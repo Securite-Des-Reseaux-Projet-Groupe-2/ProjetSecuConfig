@@ -1,4 +1,4 @@
-```
+
 conf t
 
 #configuration des vlan 
@@ -42,6 +42,6 @@ exit
 end
 
 copy running-config startup-config
-```
+
 
 
