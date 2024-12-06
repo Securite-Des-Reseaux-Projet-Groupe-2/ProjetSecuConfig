@@ -18,7 +18,7 @@ no shut
 exit
 
 interface FastEthernet0/0
-ip address 10.1.0.5 255.255.255.252
+ip address 10.1.0.10 255.255.255.252
 no shut
 exit
 
