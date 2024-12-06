@@ -1,4 +1,4 @@
-```
+
 en
 conf t
 
@@ -24,11 +24,16 @@ no ip dhcp snooping trust
 no ip arp inspection trust  
 ip dhcp snooping limit rate 5  
 spanning-tree bpduguard enable  
+switchport mode access
+switchport access vlan 100
+no shut
+exit 
 
 int g1/0  
 ip dhcp snooping trust  
 ip arp inspection trust  
-
+switchport trunk encapsulation dot1q
+switchport mode trunk
 no shut  
 exit   
 
@@ -53,4 +58,4 @@ username helpdesk privilege 1 secret cisco
 end
 
 copy run start
-```
+
