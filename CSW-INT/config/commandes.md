@@ -32,7 +32,10 @@ ip address 10.1.3.254 255.255.255.0
 no shutdown
 exit
 
-#configurations des interfaces physiques
+interface range fa0/0
+ip address 10.1.0.6 255.255.255.252
+no shutdown
+exit
 
 interface range fa1/0
 switchport trunk encapsulation dot1q
@@ -53,6 +56,19 @@ interface range fa1/3
 switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
+
+router ospf 1
+router-id 1.1.1.1
+network 10.1.1.0 0.0.0.255 area 0
+network 10.1.2.0 0.0.0.255 area 0
+network 10.1.3.0 0.0.0.255 area 0
+network 10.1.0.4 0.0.0.3 area 0
+passive-interface fa1/0
+passive-interface fa1/1
+passive-interface fa1/2
+passive-interface fa1/3
+exit
+
 end
 
 copy running-config startup-config
