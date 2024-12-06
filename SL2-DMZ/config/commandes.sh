@@ -12,7 +12,6 @@ ip dhcp snooping
 ip dhcp snooping vlan 100  
 ip arp inspection vlan 100  
 
-no cdp run  
 
 int range g1/1 - 2  
 no cdp enable  
