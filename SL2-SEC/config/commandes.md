@@ -24,7 +24,7 @@ username helpdesk privilege 1 secret cisco
 ip domain-name  meditechbelgica.local
 
 # Accès SSH sécurisé
-line vty 0 15
+line vty 0 4
 login local
 transport input ssh
 exit
@@ -48,6 +48,8 @@ switchport access vlan 10
 no ip arp inspection trust
 no ip dhcp snooping trust
 ip dhcp snooping limit rate 10
+spanning-tree bpduguard
+spanning-tree guard root
 no cdp enable
 
 end
