@@ -70,5 +70,5 @@ spanning-tree guard root
 no cdp enable
 
 end
-```
 copy running-config startup-config
+```
