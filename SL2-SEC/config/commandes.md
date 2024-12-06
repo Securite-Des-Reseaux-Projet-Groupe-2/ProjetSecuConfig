@@ -18,6 +18,12 @@ exit
 interface range gigabitEthernet 0/1 - 2
 switchport mode access
 switchport access vlan 10
+
+int vlan 10
+ip address 10.1.1.241 255.255.255.0
+no shut
+exit
+
 end
 
 copy running-config startup-config
