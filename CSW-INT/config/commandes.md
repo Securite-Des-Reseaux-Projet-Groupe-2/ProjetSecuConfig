@@ -34,11 +34,25 @@ exit
 
 #configurations des interfaces physiques
 
-interface range gigabitEthernet 1/0 - 3
+interface range fa1/0
 switchport trunk encapsulation dot1q
 switchport mode trunk
 exit
 
+interface range fa1/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+exit
+
+interface range fa1/2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+exit
+
+interface range fa1/3
+switchport trunk encapsulation dot1q
+switchport mode trunk
+exit
 end
 
 copy running-config startup-config
