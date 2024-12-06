@@ -1,4 +1,4 @@
-
+```
 conf t
 
 #configuration des vlan 
@@ -43,21 +43,25 @@ exit
 interface range fa1/0
 switchport trunk encapsulation dot1q
 switchport mode trunk
+no cdp enable
 exit
 
 interface range fa1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
+no cdp enable
 exit
 
 interface range fa1/2
 switchport trunk encapsulation dot1q
 switchport mode trunk
+no cdp enable
 exit
 
 interface range fa1/3
 switchport trunk encapsulation dot1q
 switchport mode trunk
+no cdp enable
 exit
 
 router ospf 1
@@ -72,9 +76,27 @@ passive-interface fa1/2
 passive-interface fa1/3
 exit
 
+ip route 0.0.0.0 0.0.0.0 10.1.0.5
+
+# Création users
+username admin privilege 15 secret cisco
+username helpdesk privilege 1 secret cisco
+
+#Nome de domaine
+ip domain-name  meditechbelgica.local
+
+# Accès SSH sécurisé
+line vty 0 15
+login local
+transport input ssh
+exit
+crypto key generate rsa
+2048
+ip ssh version 2
+
 end
 
 copy running-config startup-config
-
+```
 
 
