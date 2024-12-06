@@ -1,4 +1,4 @@
-
+```
 conf t
 
 #configuration des vlan 
@@ -43,21 +43,25 @@ exit
 interface range fa1/0
 switchport trunk encapsulation dot1q
 switchport mode trunk
+no cdp enable
 exit
 
 interface range fa1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
+no cdp enable
 exit
 
 interface range fa1/2
 switchport trunk encapsulation dot1q
 switchport mode trunk
+no cdp enable
 exit
 
 interface range fa1/3
 switchport trunk encapsulation dot1q
 switchport mode trunk
+no cdp enable
 exit
 
 router ospf 1
@@ -75,6 +79,6 @@ exit
 end
 
 copy running-config startup-config
-
+```
 
 
