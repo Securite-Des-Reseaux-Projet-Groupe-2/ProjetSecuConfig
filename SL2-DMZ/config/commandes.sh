@@ -10,7 +10,9 @@ exit
 
 ip dhcp snooping  
 ip dhcp snooping vlan 100  
-ip arp inspection vlan 100  
+ip arp inspection vlan 100
+#ip arp inspection static <ip address> <MAC adress> vlan <vlan id> <untrusted interface interface>
+#ip dhcp snooping binding <ip address> <MAC adress> vlan <vlan id> <untrusted interface interface>
 
 
 int range g1/1 - 2  
