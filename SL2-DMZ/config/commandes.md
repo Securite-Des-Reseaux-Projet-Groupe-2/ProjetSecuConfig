@@ -1,6 +1,8 @@
 ```
 en
-conf t  
+conf t
+
+hostname SL2-DMZ
 
 vlan 100
 name DMZ
