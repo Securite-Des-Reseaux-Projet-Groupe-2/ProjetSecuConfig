@@ -8,7 +8,7 @@ conf t
 vlan 30
 name SRV
 
-#configurer les interfaces physiques
+#configurer les interfaces physique
 
 interface gigabitEthernet 0/0
 switchport trunk encapsulation dot1q
