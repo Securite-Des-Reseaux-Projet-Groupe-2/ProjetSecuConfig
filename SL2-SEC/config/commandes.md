@@ -3,6 +3,8 @@ enable
 
 conf t
 
+hostname SL2-SEC
+
 # Configurations des Vlans
 vlan 10
 name SEC
