@@ -1,3 +1,4 @@
+```
 enable
 
 conf t
@@ -11,6 +12,8 @@ exit
 ip dhcp snooping
 ip dhcp snooping vlan 10
 ip arp inspection vlan 10
+#ip arp inspection static <ip address> <MAC adress> vlan <vlan id> <untrusted interface interface>
+#ip dhcp snooping binding <ip address> <MAC adress> vlan <vlan id> <untrusted interface interface>
 
 
 # Création d'un utilisateur Admin avec les privilèges admins
@@ -48,4 +51,4 @@ ip dhcp snooping limit rate 10
 no cdp enable
 
 end
-
+```
