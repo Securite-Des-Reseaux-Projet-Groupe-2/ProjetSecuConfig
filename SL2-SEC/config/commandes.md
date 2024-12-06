@@ -1,4 +1,3 @@
-```
 enable
 
 conf t
@@ -46,12 +45,7 @@ switchport access vlan 10
 no ip arp inspection trust
 no ip dhcp snooping trust
 ip dhcp snooping limit rate 10
-switchport port-security
-switchport port-security maximum 10
-switchport port-security violation restrict
-switchport port-security mac-address sticky
 no cdp enable
 
 end
 
-```
