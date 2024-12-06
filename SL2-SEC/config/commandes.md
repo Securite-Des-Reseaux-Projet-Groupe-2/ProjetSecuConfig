@@ -53,4 +53,5 @@ spanning-tree guard root
 no cdp enable
 
 end
+copy run start
 ```
