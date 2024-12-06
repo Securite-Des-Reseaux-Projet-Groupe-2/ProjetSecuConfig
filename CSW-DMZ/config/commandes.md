@@ -27,6 +27,20 @@ router ospf 1
  network 10.1.0.0 0.0.0.3 area 0
  network 10.100.0.0 0.0.0.255 area 0
 
+ip route 0.0.0.0 0.0.0.0 10.1.0.9
+
+#Nom de domaine
+ip domain-name  meditechbelgica.local
+
+# Accès SSH sécurisé
+line vty 0 15
+login local
+transport input ssh
+exit
+crypto key generate rsa
+2048
+ip ssh version 2
+
 end
 
 copy running-config startup-config
