@@ -12,7 +12,8 @@ exit
 ip dhcp snooping
 ip dhcp snooping vlan 20
 ip arp inspection vlan 20
-
+#ip arp inspection static <ip address> <MAC adress> vlan <vlan id> <untrusted interface interface>
+#ip dhcp snooping binding <ip address> <MAC adress> vlan <vlan id> <untrusted interface interface>
 
 # Création d'un utilisateur Admin avec les privilèges admins
 username admin privilege 15 secret salut
@@ -21,7 +22,7 @@ username admin privilege 15 secret salut
 ip domain-name  meditechbelgica.local
 
 # Accès SSH sécurisé
-line vty 0 15
+line vty 0 4
 login local
 transport input ssh
 exit
@@ -45,7 +46,13 @@ switchport access vlan 20
 no ip arp inspection trust
 no ip dhcp snooping trust
 ip dhcp snooping limit rate 10
+spanning-tree bpduguard
+spanning-tree guard root
 no cdp enable
 
 end
+
+copy run start
+```
+
 
